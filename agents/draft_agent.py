@@ -11,7 +11,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 load_dotenv()
 
 # ── LLM 초기화 ────────────────────────────────────────────
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3, max_tokens=4000)
 
 # ── 경로 설정 ─────────────────────────────────────────────
 PROMPT_PATH = Path("prompts/draft_prompt.txt")
@@ -85,6 +85,9 @@ def run_draft(state: dict) -> dict:
 4. 3.4 경쟁사 비교 종합 표를 반드시 완성할 것
 5. REFERENCE 섹션에 실제 출처 URL을 포함할 것
 6. 보고서 작성 후 Self-Reflection 체크리스트를 포함할 것
+7. 각 섹션은 최소 3~5문장 이상 작성할 것 
+8. 경쟁사별 분석은 수집된 증거(evidence)와 간접 지표를 모두 서술할 것 
+9. SUMMARY는 보고서 전체 내용을 압축하여 임원이 바로 판단할 수 있도록 작성할 것 
 """
 
     # ── LLM 호출 ──────────────────────────────────────────
