@@ -1,0 +1,95 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# =========================
+# Secrets / environment
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Build / packaging
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Test / coverage / lint cache
+# =========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Vector DB / embedding cache
+# =========================
+.cache/
+faiss_index/
+vectorstore/
+vector_db/
+chroma/
+chroma_db/
+db/
+
+# FAISS artifacts
+*.faiss
+index.faiss
+index.pkl
+
+# =========================
+# Project outputs
+# =========================
+outputs/
+tmp/
+temp/
+#*.pdf
+
+# =========================
+# Data files (optional)
+# 주석 해제해서 원본 논문 PDF까지 제외 가능
+# =========================
+# data/
+# papers/
+# *.csv
+# *.json
