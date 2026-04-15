@@ -82,6 +82,7 @@ Supervisor (Rule 기반 분기)
 
 > Ensemble (BM25+FAISS)가 전 지표에서 최고 성능을 기록하여 최종 Retriever로 채택
 
+![result](rag_eval_result.png)
 ---
 
 ## Directory Structure
