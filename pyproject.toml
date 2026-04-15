@@ -15,7 +15,6 @@ dependencies = [
     "langchain-openai>=1.0.1",
     "langchain-ollama>=1.0.0",
     "langchain-tavily>=0.2.12",
-    "langchain-teddynote>=0.5.4",
     "langgraph>=1.0.1",
     "langgraph-supervisor>=0.0.31",
     "langgraph-checkpoint-postgres>=3.0.0",
