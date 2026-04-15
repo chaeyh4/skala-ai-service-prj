@@ -11,7 +11,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 load_dotenv()
 
 # ── LLM 초기화 ────────────────────────────────────────────
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0, max_tokens=3000)
 
 # ── 프롬프트 로드 ─────────────────────────────────────────
 PROMPT_PATH = Path("prompts/analysis_prompt.txt")

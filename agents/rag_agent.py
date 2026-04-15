@@ -22,7 +22,7 @@ class RAGAgentConfig:
     """Configuration for the RAG Agent."""
     index_root: str = ".cache/faiss_index"
     embedding_model: str = "text-embedding-3-small"
-    top_k: int = 6
+    top_k: int = 10
     min_results: int = 5
 
 
@@ -118,7 +118,7 @@ class RAGAgent:
         return text
 
     @staticmethod
-    def _make_summary(text: str, max_chars: int = 220) -> str:
+    def _make_summary(text: str, max_chars: int = 1000) -> str:
         """
         Create a compact 2-3 sentence style summary from a chunk.
         For chunked paper text, a clipped summary is usually more stable than LLM summarization.
@@ -160,7 +160,7 @@ class RAGAgent:
 def get_rag_agent(
     index_root: str = ".cache/faiss_index",
     embedding_model: str = "text-embedding-3-small",
-    top_k: int = 6,
+    top_k: int = 10,
     min_results: int = 5,
 ) -> RAGAgent:
     """Factory function for app/supervisor integration."""

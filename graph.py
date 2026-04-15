@@ -44,7 +44,10 @@ from agents.supervisor import run_supervisor
 rag_agent = get_rag_agent()
 
 def node_rag(state: State) -> State:
-    output = rag_agent.run(state["query"])
+    output = rag_agent.run(
+        query=state["query"],
+        top_k=10  # ← 명시적으로 지정
+    )
     state["rag_results"] = output["rag_results"]
     return state
 

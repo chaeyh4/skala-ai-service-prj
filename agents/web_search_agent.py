@@ -10,7 +10,7 @@ from langchain_openai import ChatOpenAI
 load_dotenv()
 
 # ── 도구 초기화 ──────────────────────────────────────────
-tool = TavilySearch(max_results=5)
+tool = TavilySearch(max_results=30)
 
 # ── 확증 편향 방지: 반대 관점 쿼리 3종 강제 생성 ──────────
 QUERY_TEMPLATES = {
@@ -60,7 +60,7 @@ def run_web_search(state: dict) -> dict:
                     source_counter[domain] = source_counter.get(domain, 0) + 1
 
                     all_results.append({
-                        "summary": r.get("content", "")[:300],  # 300자로 제한 (토큰 절약)
+                        "summary": r.get("content", "")[:1000],  # 300자로 제한 (토큰 절약)
                         "source": source,
                         "date": r.get("published_date", "unknown"),
                         "keyword_matched": query,
