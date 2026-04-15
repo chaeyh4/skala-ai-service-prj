@@ -40,8 +40,8 @@ def run_analysis(state: dict) -> dict:
     web_results = state.get("web_results", [])
 
     # ── 입력 데이터 요약 ──────────────────────────────────
-    rag_summary = json.dumps(rag_results[:10], ensure_ascii=False, indent=2)
-    web_summary = json.dumps(web_results[:15], ensure_ascii=False, indent=2)
+    rag_summary = json.dumps(rag_results[:100], ensure_ascii=False, indent=2)
+    web_summary = json.dumps(web_results[:150], ensure_ascii=False, indent=2)
     trl_guideline = _load_trl_guideline()
     system_prompt = _load_prompt()
 
