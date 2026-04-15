@@ -2,7 +2,7 @@
 
 ---
 
-## SUMMARY (임원용, 1/2 페이지 이내)
+## SUMMARY
 
 - HBM4에서는 기존 Micro-bump 방식의 물리적 한계(피치 축소, 발열 문제)로 인해 **Cu-Cu Hybrid Bonding으로의 전환이 필수적**임  
 - 주요 경쟁사(SK하이닉스, Samsung, TSMC)는 **TRL 5~7 구간으로 추정되며, 양산 직전 단계 진입 중**  

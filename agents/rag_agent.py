@@ -22,7 +22,7 @@ class RAGAgentConfig:
     """Configuration for the RAG Agent."""
     index_root: str = ".cache/faiss_index"
     embedding_model: str = "text-embedding-3-small"
-    top_k: int = 10
+    top_k: int = 20
     min_results: int = 5
 
 
@@ -160,7 +160,7 @@ class RAGAgent:
 def get_rag_agent(
     index_root: str = ".cache/faiss_index",
     embedding_model: str = "text-embedding-3-small",
-    top_k: int = 10,
+    top_k: int = 20,
     min_results: int = 5,
 ) -> RAGAgent:
     """Factory function for app/supervisor integration."""
